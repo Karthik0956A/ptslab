@@ -58,6 +58,7 @@ http://192.168.20.113:30221/root/grantComplete/csrfLesson?userId=1920245357
 
 
 1. reflected xss :- <script> alert('XSS') </script>
+                     or open this url ipaddress:port/restaurant/4?from=<script>alert(1)</script>
 
 2. stored xss:- <img src="#" onerror="alert('XSS')">.          Ishke liye, profile mein Jake bold kardo
 
